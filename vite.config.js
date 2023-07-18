@@ -10,4 +10,16 @@ export default defineConfig({
     AutoImport({ imports: ["vue", "vue-router", "pinia"] }),
     Components({ resolvers: [ElementPlusResolver()] }),
   ],
+  build: {
+    outDir: "dwgl",
+  },
+  server: {
+    https: false,
+    port: 8001,
+    host: "0.0.0.0",
+    open: false,
+    cors: true,
+    proxy: {},
+    hmr: false,
+  },
 });
